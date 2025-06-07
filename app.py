@@ -352,7 +352,7 @@ def get():
         if not T_GRAPH or T_GRAPH.number_of_nodes() == 0:
             return Titled("Graph Visualization - No Data", Div(P("No graph data loaded.")))
         elements_json = serialize_graph_for_cytoscape(T_GRAPH, NODE_LEVELS)
-        return Titled("L\'Éthique Livre I", graph_styles, Div(id="cy"), cytoscape_init_script("cy", elements_json))
+        return Titled("Livre I", graph_styles, Div(id="cy"), cytoscape_init_script("cy", elements_json))
     except Exception as e:
         error_details = traceback.format_exc()
         print(f"--- SERVER ERROR IN / ROUTE ---\n{error_details}\n-----------------------------")
