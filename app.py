@@ -10,6 +10,7 @@ import traceback
 
 # Initialize app
 app, rt = fast_app(
+    secret_key=os.environ.get('SECRET_KEY'),
     hdrs=(
         Script(src="https://unpkg.com/cytoscape@3.28.1/dist/cytoscape.min.js"),
         Script(src="https://unpkg.com/@popperjs/core@2"),
